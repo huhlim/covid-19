@@ -22,6 +22,12 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
 
+    # Pull nytimes data
+    - name: Pull nytimes COVID-19 data
+      uses: textbook/git-checkout-submodule-action@master
+      with:
+          remote: true
+
     # Runs a single command using the runners shell
     - name: Install dependencies
       run: |
