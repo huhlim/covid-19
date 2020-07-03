@@ -17,7 +17,7 @@ def plot_by_date(state, data, xticks=[], xticklabels=[], xylim_s=[], multiple=No
                 xticks.append(dd)
                 xticklabels.append(d.strftime("%Y-%m-%d"))
     #
-    fig, ax = plt.subplots(2, 2, figsize=(16, 10), sharex=True)
+    fig, ax = plt.subplots(2, 2, figsize=(12, 9), sharex=True)
     #
     if xylim_s == []:
         xylim_s = np.zeros((2, 2, 2, 2), dtype=float)   # j, i, x/y, range
@@ -74,7 +74,7 @@ def plot_by_date(state, data, xticks=[], xticklabels=[], xylim_s=[], multiple=No
     return pltargs
 
 def plot_by_case(state, data, xylim_s=[], multiple=None, norm=False):
-    fig, ax = plt.subplots(2, 2, figsize=(16, 10))
+    fig, ax = plt.subplots(2, 2, figsize=(12, 9))
     if xylim_s == []:
         xylim_s = np.zeros((2, 2, 2, 2), dtype=float)   # j, i, x/y, range
     color='red'
