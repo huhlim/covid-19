@@ -4,6 +4,9 @@
 ![US and all states](https://github.com/huhlim/covid-19/blob/master/data/by_date/_all_.png)
 ![US and all states](https://github.com/huhlim/covid-19/blob/master/data/by_case/_all_.png)
 
+## New Jersey
+![New Jersey](https://github.com/huhlim/covid-19/blob/master/data/by_date/New%20Jersey.png)
+![New Jersey](https://github.com/huhlim/covid-19/blob/master/data/by_date/New%20Jersey.png)
 
 ## Michigan
 ![Michigan](https://github.com/huhlim/covid-19/blob/master/data/by_date/Michigan.png)
