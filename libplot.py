@@ -54,7 +54,7 @@ def plot_by_date(state, data, xticks=[], xticklabels=[], xylim_s=[], multiple=No
             else:
                 xylim_s[j,i,0] = ax[j,i].get_xlim()
             ylim = xylim_s[j,i,1]
-            if ylim[1]-ylim[0] > 0.0:
+            if ylim[1]-ylim[0] > 0.0 and j == 0:
                 ax[j,i].set_ylim(ylim)
             else:
                 if j == 0:
