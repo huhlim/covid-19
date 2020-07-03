@@ -2,6 +2,7 @@
 from libcommon import *
 
 import matplotlib
+matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 font = {"size": 14}
