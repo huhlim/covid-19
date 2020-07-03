@@ -38,3 +38,11 @@ jobs:
     - name: Run
       run: |
         sh ./run.sh
+
+    # commit the updated files
+    - name: Commit
+      run: |
+          git config --global user.name "Lim Heo"
+          git config --global user.email "huhlim@gmail.com"
+          git commit -am "Automated update" data/*/*
+          git push
