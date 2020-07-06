@@ -46,7 +46,7 @@ def plot_by_date(state, data, xticks=[], xticklabels=[], xylim_s=[], multiple=No
             if j == 0:
                 ax[j,i].set_yscale("log")
             ax[j,i].set_xticks(xticks)
-            ax[j,i].set_xticklabels(xticklabels, rotation=15)
+            ax[j,i].set_xticklabels(xticklabels, rotation=20)
             #
             xlim = xylim_s[j,i,0]
             if xlim[1]-xlim[0] > 0.0:
