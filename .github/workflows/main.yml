@@ -40,7 +40,9 @@ jobs:
     # commit the updated files
     - name: Commit
       run: |
-          git config --global user.name "Lim Heo"
-          git config --global user.email "huhlim@gmail.com"
-          git commit -m "Automated update" data/*/*
-          git push
+          if [[ $(git status | wc -l) -gt 20 ]]; then
+            git config --global user.name "Lim Heo"
+            git config --global user.email "huhlim@gmail.com"
+            git commit -m "Automated update" data/*/*
+            git push
+          fi
