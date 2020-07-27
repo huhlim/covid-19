@@ -1,7 +1,8 @@
 import numpy as np
 import datetime
 
-START_DATE = datetime.datetime.strptime('2020-01-21', "%Y-%m-%d")
+#START_DATE = datetime.datetime.strptime('2020-01-21', "%Y-%m-%d")
+START_DATE = datetime.datetime.strptime('2020-02-21', "%Y-%m-%d")
 OUTPUT='./data'
 HIGHLIGHT = ['Michigan', 'New York', 'New Jersey']
 
