@@ -40,7 +40,9 @@ def plot_by_date(state, data, xticks=[], xticklabels=[], xylim_s=[], multiple=No
                 n = n.astype(float) / data['norm']
             #
             ax[j,i].plot(time_delta(data['date']), n, 'x', linewidth=1, ms=5, color=color)
-            ax[j,i].plot(time_delta(data['date']), smooth(data['date'], n), '-', linewidth=2.5, color=color)
+            #
+            smooth_n = smooth(data['date'], n)
+            ax[j,i].plot(time_delta(data['date']), smooth_n, '-', linewidth=2.5, color=color)
             #
             ax[j,i].grid(True, linewidth=0.5)
             if j == 0:
@@ -62,6 +64,7 @@ def plot_by_date(state, data, xticks=[], xticklabels=[], xylim_s=[], multiple=No
                     ax[j,i].set_ylim(bottom=10**(1-i))
                 else:
                     ax[j,i].set_ylim(bottom=0)
+                ax[j,i].set_ylim(top=1.25*np.max(smooth_n))
                 xylim_s[j,i,1] = ax[j,i].get_ylim()
     #
     fig.tight_layout()
