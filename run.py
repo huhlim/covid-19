@@ -107,5 +107,11 @@ def main():
     plot_by_date("Michigan.Ingham", ingham_MI, norm=True)
     plot_by_case("Michigan.Ingham", ingham_MI, norm=True)
     
+    bergen_NJ = get_county_data("New Jersey", "Bergen", by_county, populations)
+    plot_by_date("New Jersey.Bergen", bergen_NJ)
+    plot_by_case("New Jersey.Bergen", bergen_NJ)
+    plot_by_date("New Jersey.Bergen", bergen_NJ, norm=True)
+    plot_by_case("New Jersey.Bergen", bergen_NJ, norm=True)
+    
 if __name__ == '__main__':
     main()
