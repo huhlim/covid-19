@@ -5,6 +5,8 @@ name: CI
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 on:
+  push:
+    branches: [ master ]
   schedule:
     - cron: "00 */4 * * *"
 
@@ -43,6 +45,7 @@ jobs:
           if [[ $(git status | wc -l) -gt 20 ]]; then
             git config --global user.name "Lim Heo"
             git config --global user.email "huhlim@gmail.com"
+            git add data/*/*
             git commit -m "Automated update" data/*/*
             git push
           fi
