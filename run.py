@@ -84,34 +84,34 @@ def main():
     multiple_states = [get_state_data(state, by_state, populations) for state in state_s]
     #
     pltargs_date = plot_by_date("_all_", us_data, multiple=multiple_states)
-    pltargs_case = plot_by_case("_all_", us_data, multiple=multiple_states)
+    #pltargs_case = plot_by_case("_all_", us_data, multiple=multiple_states)
     pltargs_date_norm = plot_by_date("_all_", us_data, multiple=multiple_states, norm=True)
-    pltargs_case_norm = plot_by_case("_all_", us_data, multiple=multiple_states, norm=True)
+    #pltargs_case_norm = plot_by_case("_all_", us_data, multiple=multiple_states, norm=True)
     #
     plot_by_date("_US_", us_data, **pltargs_date)
-    plot_by_case("_US_", us_data, **pltargs_case)
+    #plot_by_case("_US_", us_data, **pltargs_case)
     plot_by_date("_US_", us_data, norm=True, **pltargs_date_norm)
-    plot_by_case("_US_", us_data, norm=True, **pltargs_case_norm)
+    #plot_by_case("_US_", us_data, norm=True, **pltargs_case_norm)
     #
     for data,state in zip(multiple_states, state_s):
         if data is None: continue
         print (state)
         plot_by_date(state, data, **pltargs_date)
-        plot_by_case(state, data, **pltargs_case)
+        #plot_by_case(state, data, **pltargs_case)
         plot_by_date(state, data, norm=True, **pltargs_date_norm)
-        plot_by_case(state, data, norm=True, **pltargs_case_norm)
+        #plot_by_case(state, data, norm=True, **pltargs_case_norm)
 
     ingham_MI = get_county_data("Michigan", "Ingham", by_county, populations)
     plot_by_date("Michigan.Ingham", ingham_MI)
     plot_by_case("Michigan.Ingham", ingham_MI)
     plot_by_date("Michigan.Ingham", ingham_MI, norm=True)
-    plot_by_case("Michigan.Ingham", ingham_MI, norm=True)
+    #plot_by_case("Michigan.Ingham", ingham_MI, norm=True)
     
     bergen_NJ = get_county_data("New Jersey", "Bergen", by_county, populations)
     plot_by_date("New Jersey.Bergen", bergen_NJ)
-    plot_by_case("New Jersey.Bergen", bergen_NJ)
+    #plot_by_case("New Jersey.Bergen", bergen_NJ)
     plot_by_date("New Jersey.Bergen", bergen_NJ, norm=True)
-    plot_by_case("New Jersey.Bergen", bergen_NJ, norm=True)
+    #plot_by_case("New Jersey.Bergen", bergen_NJ, norm=True)
     
 if __name__ == '__main__':
     main()
