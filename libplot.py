@@ -15,7 +15,7 @@ def plot_by_date(state, data, xticks=[], xticklabels=[], xylim_s=[], multiple=No
         for d,dd in zip(days, ddays):
             if d.day == 1:
                 xticks.append(dd)
-                xticklabels.append(d.strftime("%m-%d"))
+                xticklabels.append(d.strftime("%m"))
     #
     fig, ax = plt.subplots(2, 2, figsize=(12, 9), sharex=True)
     #
